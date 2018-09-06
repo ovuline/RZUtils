@@ -48,7 +48,10 @@
 @property (nonatomic, copy) void (^completionBlock)(BOOL succeeded, RZViewControllerTransitioningContext* transitioningContext);
 
 //Sets if the transition will be animated or not
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 @property (nonatomic, assign) BOOL animated;
+#pragma clang diagnostic pop
 
 // The parent ViewController.  Used to call didMoveToParentViewController: and other containment methods on the ChildViewControllers.
 @property (nonatomic, weak) UIViewController* parentViewController;
